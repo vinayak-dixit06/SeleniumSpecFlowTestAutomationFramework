@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SeleniumSpecFlowTestAutomationFramework")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c59fcca0283cce79f742e98e4471598f122273a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b019a4b0d100bdecf85524c4056339f3bd67217d")]
 [assembly: System.Reflection.AssemblyProductAttribute("SeleniumSpecFlowTestAutomationFramework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SeleniumSpecFlowTestAutomationFramework")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
