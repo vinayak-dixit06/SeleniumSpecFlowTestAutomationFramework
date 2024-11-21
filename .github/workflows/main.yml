@@ -34,7 +34,7 @@ jobs:
       - name: Run Selenium Tests
         env:
           DOTNET_ROOT: ${{ runner.tool_cache }}/dncs # Ensure .NET is correctly detected
-        run: dotnet test --logger:trx --results-directory ./TestResults --collect:"XPlat Code Coverage"
+        run: dotnet test --logger:trx --results-directory ./TestResults
 
 
         # Step 6: Publish Test Results
