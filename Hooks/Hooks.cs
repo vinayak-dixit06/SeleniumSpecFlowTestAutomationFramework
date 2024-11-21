@@ -13,7 +13,7 @@ namespace SeleniumSpecFlowTestAutomationFramework.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
-            WebDriverConfig.LaunchBrowser();
+            WebDriverConfig.LaunchBrowser("Edge");
             WebDriverConfig.LaunchApp();
         }
 

@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.BiDi.Communication;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +16,25 @@ namespace SeleniumSpecFlowTestAutomationFramework.Configurations
         public static IWebDriver Driver 
         { 
             get; 
-            private set; 
+            private set;
         }
 
-        public static void LaunchBrowser()
+        public static void LaunchBrowser(string browser)
         {
-            Driver = new EdgeDriver();
+            switch (browser.ToLower())
+            {
+                case "chrome":
+                    Driver = new ChromeDriver();
+                    break;
+                case "firefox":
+                    Driver = new FirefoxDriver();
+                    break;
+                case "edge":
+                    Driver = new EdgeDriver();
+                    break;
+                default:
+                    throw new ArgumentException("Invalid browser specified");
+            }
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             Driver.Manage().Window.Maximize();
         }
