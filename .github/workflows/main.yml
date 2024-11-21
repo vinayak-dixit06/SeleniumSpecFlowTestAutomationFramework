@@ -31,14 +31,15 @@ jobs:
       - name: Build Project
         run: dotnet build --configuration Release
 
-      # Step 5: Run Tests
       - name: Run Selenium Tests
         env:
           DOTNET_ROOT: ${{ runner.tool_cache }}/dncs # Ensure .NET is correctly detected
-        run: dotnet test --logger:trx --results-directory ./TestResults
+        run: dotnet test --logger:trx --results-directory ./TestResults --collect:"XPlat Code Coverage" --no-fail-fast
+
 
         # Step 6: Publish Test Results
       - name: Publish Test Results
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: TestResults
@@ -46,6 +47,7 @@ jobs:
 
       # Step 7: Publish Extent Report
       - name: Publish Test Reports
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: ExtentReports
