@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace SeleniumSpecFlowTestAutomationFramework.Configurations
 
         public static void LaunchBrowser()
         {
-            Driver = new ChromeDriver();
+            Driver = new EdgeDriver();
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             Driver.Manage().Window.Maximize();
         }

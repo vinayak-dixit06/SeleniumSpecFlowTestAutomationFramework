@@ -26,5 +26,11 @@ namespace SeleniumSpecFlowTestAutomationFramework.Pages
         {
             Driver.FindElement(element).SendKeys(value);
         }
+
+        public string ReadElementText(By element)
+        {
+            var extractedText = Driver.FindElement(element).Text;
+            return extractedText;
+        }
     }
 }

@@ -93,13 +93,13 @@ namespace SeleniumSpecFlowTestAutomationFramework.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Successful registration with valid details")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Successful registration with random details")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Registration on Parabank")]
-        public void SuccessfulRegistrationWithValidDetails()
+        public void SuccessfulRegistrationWithRandomDetails()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful registration with valid details", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful registration with random details", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -113,46 +113,13 @@ namespace SeleniumSpecFlowTestAutomationFramework.Features
 #line 7
     testRunner.Given("I am on the Parabank registration page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "FirstName",
-                            "John"});
-                table1.AddRow(new string[] {
-                            "LastName",
-                            "Doe"});
-                table1.AddRow(new string[] {
-                            "Address",
-                            "123 Elm St"});
-                table1.AddRow(new string[] {
-                            "City",
-                            "Springfield"});
-                table1.AddRow(new string[] {
-                            "State",
-                            "IL"});
-                table1.AddRow(new string[] {
-                            "ZipCode",
-                            "62701"});
-                table1.AddRow(new string[] {
-                            "Phone",
-                            "5551234567"});
-                table1.AddRow(new string[] {
-                            "SSN",
-                            "123-45-6789"});
-                table1.AddRow(new string[] {
-                            "Username",
-                            "newuser"});
-                table1.AddRow(new string[] {
-                            "Password",
-                            "NewPassword1"});
-                table1.AddRow(new string[] {
-                            "Confirm",
-                            "NewPassword1"});
 #line 8
-    testRunner.When("I fill in the registration form with the following details:", ((string)(null)), table1, "When ");
+    testRunner.When("I fill in the registration form with random details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 20
+#line 9
     testRunner.And("I click on the \"Register\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 21
+#line 10
     testRunner.Then("I should see the success message \"Your account was created successfully. You are " +
                         "now logged in.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -168,7 +135,7 @@ namespace SeleniumSpecFlowTestAutomationFramework.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Registration with missing mandatory fields", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 23
+#line 12
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -178,17 +145,17 @@ namespace SeleniumSpecFlowTestAutomationFramework.Features
             else
             {
                 this.ScenarioStart();
-#line 24
+#line 13
     testRunner.Given("I am on the Parabank registration page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 25
+#line 14
     testRunner.When("I leave mandatory fields empty in the registration form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 26
+#line 15
     testRunner.And("I click on the \"Register\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 27
-    testRunner.Then("I should see an error message \"Please fill out this field.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 16
+    testRunner.Then("I should see a missing username error message \"Username is required.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -202,7 +169,7 @@ namespace SeleniumSpecFlowTestAutomationFramework.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Registration with mismatched passwords", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 29
+#line 18
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -212,50 +179,17 @@ namespace SeleniumSpecFlowTestAutomationFramework.Features
             else
             {
                 this.ScenarioStart();
-#line 30
+#line 19
     testRunner.Given("I am on the Parabank registration page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "FirstName",
-                            "John"});
-                table2.AddRow(new string[] {
-                            "LastName",
-                            "Doe"});
-                table2.AddRow(new string[] {
-                            "Address",
-                            "123 Elm St"});
-                table2.AddRow(new string[] {
-                            "City",
-                            "Springfield"});
-                table2.AddRow(new string[] {
-                            "State",
-                            "IL"});
-                table2.AddRow(new string[] {
-                            "ZipCode",
-                            "62701"});
-                table2.AddRow(new string[] {
-                            "Phone",
-                            "5551234567"});
-                table2.AddRow(new string[] {
-                            "SSN",
-                            "123-45-6789"});
-                table2.AddRow(new string[] {
-                            "Username",
-                            "newuser"});
-                table2.AddRow(new string[] {
-                            "Password",
-                            "NewPassword1"});
-                table2.AddRow(new string[] {
-                            "Confirm",
-                            "WrongPassword"});
-#line 31
-    testRunner.When("I fill in the registration form with mismatched passwords", ((string)(null)), table2, "When ");
+#line 20
+    testRunner.When("I fill in the registration form with mismatched random passwords", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 43
+#line 21
     testRunner.And("I click on the \"Register\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 44
-    testRunner.Then("I should see an error message \"Passwords do not match.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 22
+    testRunner.Then("I should see an error message \"Passwords did not match.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

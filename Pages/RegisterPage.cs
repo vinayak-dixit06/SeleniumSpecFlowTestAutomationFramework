@@ -21,6 +21,9 @@ namespace SeleniumSpecFlowTestAutomationFramework.Pages
         private readonly By PasswordField = By.Id("customer.password");
         private readonly By ConfirmPasswordField = By.Id("repeatedPassword");
         private readonly By RegisterButton = By.CssSelector("input[value='Register']");
+        private readonly By RegistrationSuccessfulMessage = By.XPath("//p[text() = 'Your account was created successfully. You are now logged in.']");
+        private readonly By MissingUsernameValidationMessage = By.Id("customer.username.errors");
+        private readonly By PasswordDidNotMatchValidationMessage = By.Id("repeatedPassword.errors");
 
         public RegistrationPage(IWebDriver driver) : base(driver)
         {
@@ -85,6 +88,24 @@ namespace SeleniumSpecFlowTestAutomationFramework.Pages
         public void clickRegisterButton()
         {
             ClickElement(RegisterButton);
+        }
+
+        public string CheckRegistrationSuccessfulMessage()
+        {
+            var message = ReadElementText(RegistrationSuccessfulMessage);
+            return message;
+        }
+
+        public string CheckMissingUsernameValidationMessage()
+        {
+            var message = ReadElementText(MissingUsernameValidationMessage);
+            return message;
+        }
+
+        public string CheckPasswordsDidNotMatchValidationMessage()
+        {
+            var message = ReadElementText(PasswordDidNotMatchValidationMessage);
+            return message;
         }
     }
 }
