@@ -125,7 +125,7 @@ namespace SeleniumSpecFlowTestAutomationFramework.Tests
         public void ThenIShouldSeeAnErrorMessage(string p0)
         {
             var acutalMessage = registrationPage.CheckPasswordsDidNotMatchValidationMessage();
-            var expectedMessage = "Passwords did not match.";
+            var expectedMessage = "Passwords did not match";
 
             Assert.AreEqual(expectedMessage, acutalMessage);
         }
